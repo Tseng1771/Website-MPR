@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mitra Pangan Rezeki</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+<nav>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+    <div class="logo">
+        <img src="images/logo/logo-mpr-3.png" alt="Mitra Pangan Rezeki">
+    </div>
+ 
+    <div class="nav-links" id="nav-links">
+        <a href="#">Beranda</a>
+        <a href="#produk">Produk</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#footer">Kontak</a>
+
+        <a href="#cart-section" class="cart-nav">
+            🛒 <span id="cart-count">0</span>
+        </a>
+    </div>
+</nav>
+
+<header>
+	<div class="slider">
+		<div class="slides">
+			
+		<img src="images/banner/banner-1.png">
+		<img src="images/banner/banner-2.png">
+		<img src="images/banner/banner-3.png">
+
+		</div>	
+	</div>    
+</header>
+
+<section class="hero">
+    <h2>Supplier Gula dan Bahan Pangan untuk Bakery, UMKM dan Industri </h2>
+    <p>
+        Menyediakan gula pasir berkualitas dengan harga kompetitif dan pengiriman cepat ke seluruh Jawa Timur.
+    </p>
+    <a class="btn"
+     href="https://wa.me/6281362676828?text=Halo%20Mitra%20Pangan%20Rezeki.%20Saya%20ingin%20mendapatkan%20informasi%20harga%20dan%20stok%20gula."
+       target="_blank">
+       Minta Penawaran Harga
+    </a>
+
+    <div class="statistik">
+
+    <p>📦 Stok Siap Kirim</p>
+    <p>🚚 Distribusi Jawa Timur</p>
+    <p>🤝 Melayani UMKM & Industri</p>
+
+    </div>
+</section>
+
+<section class="produk" id="tentang">
+    <h2>Tentang Kami</h2>
+
+    <p>
+        Mitra Pangan Rezeki merupakan distributor bahan pangan yang menyediakan
+        gula, beras, minyak goreng dan telur untuk UMKM, toko bahan kue, horeca serta
+        industri makanan di Jawa Timur.
+
+        Kami berkomitmen memberikan produk berkualitas, harga kompetitif dan
+        pengiriman tepat waktu.
+    </p>
+</section>
+
+<section class="gudang-section">
+    <h2>Gudang & Stok Kami</h2>
+    <img src="images/gallery/gudang_gula3.jpg"
+		alt="Gudang MPR">
+	<p>
+		Stok gula dan bahan pangan siap dikirim untuk
+		UMKM, Toko Bahan Kue dan Industri di Jawa Timur.
+	</p>
+</section>
+
+<section class="galeri">
+    <h2>📸 Galeri</h2>
+
+    <div class="galeri-grid">
+
+        <img src="images/gallery/gudang_gula3.jpg" alt="Gudang">
+        <img src="images/gallery/gudang_gula3.jpg" alt="Stok Barang">
+        <img src="images/gallery/gudang_gula3.jpg" alt="Pengiriman">
+        <img src="images/gallery/gudang_gula3.jpg" alt="Armada">
+
+    </div>
+</section>
+
+<section class="produk" id="produk">
+
+<h2>Produk Kami</h2>
+
+<div class="grid">
+
+	<div class="card">
+		
+	    <img src="images/products/gula01.jpg" alt="Gula">
+        <h3>🌾 Gula </h3>
+        <p>
+            Gula pasir berkualitas umtuk Bakery,
+            UMKM, Toko Bahan Kue dan Industri Makanan.
+        </p>
+        <button class="btn-cart" onclick="addToCart('Gula')">
+            Tambah ke Keranjang
+        </button>
+    </div>
+    
+    <div class="card">
+		<img src="images/products/beras01.jpg" alt="Beras">
+        <h3>🍚 Beras</h3>
+        <p>
+            Menyediakan berbagai jenis beras
+            premium dan medium untuk kebutuhan
+            rumah tangga maupun usaha.
+        </p>
+        <button class="btn-cart" onclick="addToCart('Beras')">
+            Tambah ke Keranjang
+        </button>
+    </div>
+
+    <div class="card">
+        <img src="images/products/minyak01.jpg" alt="Minyak Goreng">
+
+        <h3>🛢️ Minyak Goreng</h3>
+
+        <p>
+            Minyak goreng kemasan dan curah
+            dengan stok yang siap didistribusikan.
+        </p>
+        <button class="btn-cart" onclick="addToCart('Minyak Goreng')">
+            Tambah ke Keranjang
+        </button>
+    </div>
+
+    <div class="card">
+        <img src="images/products/telur01.jpg" alt="Telur">
+
+        <h3>🥚 Telur</h3>
+
+        <p>
+            Telur ayam segar berkualitas untuk kebutuhan
+            rumah tangga, UMKM, horeca, dan industri makanan.
+        </p>
+        <button class="btn-cart" onclick="addToCart('Telur')">
+            Tambah ke Keranjang
+        </button>
+    </div>
+</div>
+
+</section>
+
+<section class="cart-section" id="cart-section">
+    <h2>Keranjang Belanja</h2>
+
+    <ul id="cart-items"></ul>
+    <button onclick="clearCart()" class="btn-cart-checkout">
+        🗑 Kosongkan Keranjang
+    </button>
+
+    <button class="btn-cart-checkout" onclick="sendCartToWhatsApp()">
+        Kirim Order via WhatsApp
+    </button>
+</section>
+
+<section class="produk">
+
+<h2>Mengapa Memilih Kami?</h2>
+
+<div class="grid">
+
+    <div class="card">
+        <h3>✅ Harga Kompetitif</h3>
+        <p>Kami memberikan harga yang bersaing untuk pembelian ecer maupun grosir.</p>
+    </div>
+
+    <div class="card">
+        <h3>✅ Pengiriman Cepat</h3>
+        <p>Armada siap mengirim ke Surabaya dan seluruh Jawa Timur.</p>
+    </div>
+
+    <div class="card">
+        <h3>✅ Stok Terjamin</h3>
+        <p>Ketersediaan stok yang stabil untuk kebutuhan usaha Anda.</p>
+    </div>
+
+</div>
+
+</section>
+
+<section class="partners">
+    <h2>Partner Kami</h2>
+
+    <div class="partner-slider">
+        <div class="partner-track">
+            <img src="images/partners/partner1.png" alt="Partner 1">
+            <img src="images/partners/partner2.png" alt="Partner 2">
+            <img src="images/partners/partner3.png" alt="Partner 3">
+            <img src="images/partners/partner4.png" alt="Partner 4">
+
+            <img src="images/partners/partner1.png" alt="Partner 1">
+            <img src="images/partners/partner2.png" alt="Partner 2">
+            <img src="images/partners/partner3.png" alt="Partner 3">
+            <img src="images/partners/partner4.png" alt="Partner 4">
+        </div>
+    </div>
+</section>
+
+<section class="layanan">
+    <h2>📍 Area Layanan</h2>
+
+    <div class="layanan-grid">
+        <div class="layanan-card">Surabaya</div>
+        <div class="layanan-card">Sidoarjo</div>
+        <div class="layanan-card">Gresik</div>
+        <div class="layanan-card">Mojokerto</div>
+        <div class="layanan-card">Pasuruan</div>
+        <div class="layanan-card">Malang</div>
+    </div>
+</section>
+
+<section class="testimoni">
+    <h2>⭐ Testimoni Pelanggan</h2>
+
+    <div class="testimoni-grid">
+
+        <div class="testimoni-card">
+            <p>"Harga kompetitif dan pengiriman cepat."</p>
+            <strong>- Bakery Surabaya</strong>
+        </div>
+
+        <div class="testimoni-card">
+            <p>"Stok selalu tersedia saat dibutuhkan."</p>
+            <strong>- UMKM Sidoarjo</strong>
+        </div>
+
+        <div class="testimoni-card">
+            <p>"Pelayanan responsif dan ramah."</p>
+            <strong>- Toko Bahan Kue Gresik</strong>
+        </div>
+
+    </div>
+</section>	
+	
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+	        <h3>Mitra Pangan Rezeki</h3>
+	        <p>
+                Distributor Bahan Pangan Terpercaya
+                untuk UMKM, Toko Bahan Kue, horeca
+                dan Industri Makanan.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>Produk</h3>
+            <p>🌾 Gula</p>
+            <p>🍚 Beras</p>
+            <p>🛢️ Minyak Goreng</p>
+            <p>🥚 Telur</p>
+        </div>
+        <div class="footer-col">
+            <h3>Hubungi Kami</h3>
+
+            <p>📞 0813-6267-6828</p>
+            <p>📧 mitrapanganrezeki@email.com</p>
+            <p>📍 Surabaya, Jawa Timur</p>
+            <div class="footer-map">
+            <iframe
+                src="https://www.google.com/maps?q=Surabaya%20Jawa%20Timur&output=embed"
+                loading="lazy">
+            </iframe>
+            </div>
+        </div>
+        
+    </div>    
+	
+    <hr>
+
+	<p class="copyright">
+        © 2026 Mitra Pangan Rezeki. All rights reserved.
+    </p>
+</footer>
+<a href="https://wa.me/6281362676828?text=Halo%20Mitra%20Pangan%20Rezeki"
+   class="whatsapp-float"
+   target="_blank">
+💬
+</a>
+<script src="js/script.js"></script>
+</body>
+</html>
