@@ -16,16 +16,16 @@
     <div class="logo">
         <img src="images/logo/logo-mpr-3.png" alt="Mitra Pangan Rezeki">
     </div>
- 
+
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+    </div>
+
     <div class="nav-links" id="nav-links">
         <a href="#">Beranda</a>
         <a href="#produk">Produk</a>
         <a href="#tentang">Tentang Kami</a>
         <a href="#footer">Kontak</a>
-
-        <a href="#cart-section" class="cart-nav">
-            🛒 <span id="cart-count">0</span>
-        </a>
     </div>
 </nav>
 
@@ -101,9 +101,28 @@
 
 <h2>Produk Kami</h2>
 
+<section class="product-filter">
+    <h2>Cari Produk</h2>
+
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Cari produk..."
+        onkeyup="searchProducts()"
+    >
+
+    <div class="filter-buttons">
+        <button onclick="filterProducts('all')">Semua</button>
+        <button onclick="filterProducts('gula')">Gula</button>
+        <button onclick="filterProducts('minyak')">Minyak</button>
+        <button onclick="filterProducts('beras')">Beras</button>
+        <button onclick="filterProducts('telur')">Telur</button>
+    </div>
+</section>
+
 <div class="grid">
 
-	<div class="card">
+	<div class="card product-card gula">
 		
 	    <img src="images/products/gula01.jpg" alt="Gula">
         <h3>🌾 Gula </h3>
@@ -116,7 +135,7 @@
         </button>
     </div>
     
-    <div class="card">
+    <div class="card product-card beras">
 		<img src="images/products/beras01.jpg" alt="Beras">
         <h3>🍚 Beras</h3>
         <p>
@@ -129,7 +148,7 @@
         </button>
     </div>
 
-    <div class="card">
+    <div class="card product-card minyak">
         <img src="images/products/minyak01.jpg" alt="Minyak Goreng">
 
         <h3>🛢️ Minyak Goreng</h3>
@@ -143,7 +162,7 @@
         </button>
     </div>
 
-    <div class="card">
+    <div class="card product-card telur">
         <img src="images/products/telur01.jpg" alt="Telur">
 
         <h3>🥚 Telur</h3>

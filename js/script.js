@@ -115,3 +115,47 @@ function updateCartCount() {
 
     document.getElementById("cart-count").textContent = total;
 }
+
+function filterProducts(category) {
+
+    const products = document.querySelectorAll('.product-card');
+
+    products.forEach(product => {
+
+        if (
+            category === 'all' ||
+            product.classList.contains(category)
+        ) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+
+    });
+}
+
+function searchProducts() {
+    console.log("SEARCH JALAN");
+    let keyword = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let products =
+        document.querySelectorAll(".product-card");
+
+    products.forEach(function(product){
+
+        let title =
+            product.querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+        if(title.includes(keyword)){
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
